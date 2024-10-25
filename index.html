@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Targetes amb Icones i Botons Rodons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Helvetica', Arial, sans-serif; /* Font més professional */
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Fons gris clar */
+        }
+        .top-bar {
+            width: 100%;
+            height: 44px; /* Augmentar la barra superior en 4px */
+            background-color: #ffe0e0; /* Color molt més clar per a la barra superior */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .top-bar img.left {
+            height: 39px;
+        }
+        .top-bar img.right {
+            height: 21px;
+            margin-right: 20px;
+        }
+        .catalog-title {
+            display: flex;
+            align-items: center;
+            color: #00796b; /* Color més viu per al text */
+            margin: 10px 20px;
+            font-size: 1em;
+        }
+        .catalog-title .item-count {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+            padding: 2px 5px;
+            border: 1px solid #00796b; /* Vora més viu */
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            justify-items: center;
+            padding: 20px;
+        }
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #00796b; /* Vores més vives */
+            border-bottom-width: 3px;
+            width: 410px;
+            overflow: hidden;
+            position: relative;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #00796b; /* Color de la línia més viu */
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .card i {
+            font-size: 2em;
+            margin-right: 10px;
+        }
+        .card h3 {
+            margin: 0;
+            font-size: 1em;
+            color: #00796b; /* Títols més vius */
+        }
+        .card p {
+            padding: 10px 0;
+            color: #00796b; /* Text més viu */
+        }
+        .card button {
+            background: none;
+            border: none;
+            color: #0000ff; /* Text en blau */
+            font-size: 1em;
+            position: absolute;
+            bottom: 5px;
+            left: 10px;
+            cursor: pointer;
+        }
+        /* Colors específics per a cada icona */
+        .card:nth-child(1) i {
+            color: #ff5722; /* Taronja */
+        }
+        .card:nth-child(2) i {
+            color: #4caf50; /* Verd */
+        }
+        .card:nth-child(3) i {
+            color: #2196f3; /* Blau */
+        }
+        .card:nth-child(4) i {
+            color: #ffeb3b; /* Groc */
+        }
+        .card:nth-child(5) i {
+            color: #9c27b0; /* Porpra */
+        }
+        .card:nth-child(6) i {
+            color: #ff9800; /* Taronja fosc */
+        }
+        .card:nth-child(7) i {
+            color: #00bcd4; /* Cian */
+        }
+        .card:nth-child(8) i {
+            color: #e91e63; /* Rosa */
+        }
+        .card:nth-child(9) i {
+            color: #795548; /* Marró */
+        }
+        .card:nth-child(10) i {
+            color: #607d8b; /* Blau grisós */
+        }
+        .card:nth-child(11) i {
+            color: #ff0000; /* Vermell */
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <img class="left" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Check_Point_logo_2022.svg/481px-Check_Point_logo_2022.svg.png" alt="Check Point Logo">
+        <img class="right" src="https://ctti.gencat.cat/web/.content/inici/ctti-gencat-cat.png_602392567.png" alt="CTTI Logo">
+    </div>
+    <div class="catalog-title">
+        Catàleg automatitzacions
+        <div class="item-count">11 ítems</div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-shield-alt"></i> <!-- Icona d'escut -->
+                <h3>Creación instancia FW independiente</h3>
+            </div>
+            <p>Se define automáticamente una instancia de FW con una serie de limitaciones en función de la talla seleccionada. Se aplica una política y se activan los módulos de seguridad correspondientes según el servicio que se quiera inspeccionar.</p>
+            <button onclick="window.location.href='index3.html'">Executar</button>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-bicycle"></i>
+                <h3>Despliegue de la monitorización de forma automática</h3>
+            </div>
+            <p>Después del despliegue de un nuevo firewall, este se da de alta de forma automática en el sistema de monitorización de Skyline. Donde de forma inmediata se podrán comenzar a ver las diferentes métricas en tiempo real.</p>
+            <button>Executar</button>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-bus"></i>
+                <h3>Monitorización de amenazas y Respuesta Automática</h3>
+            </div>
+            <p>Configuración de sistemas de monitorización para detección de anomalías en la red y activación de respuestas automáticas para mitigar amenazas.</p>
+            <button>Executar</button>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-motorcycle"></i>
+                <h3>Implementación de Políticas de Seguridad Dinámicas</h3>
+            </div>
+            <p>Creación de políticas de seguridad donde se incluyan objetos dinámicos relacionados con objetos de Cisco ACI (como pueden ser los EPGs). La sincronización de estos objetos se realiza de forma automática sin la necesidad de ninguna intervención manual.</p>
+            <button>Executar</button>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-plane"></i>
+                <h3>Auto escalado en función de las necesidades de los equipos</h3>
+            </div>
+            <p>Reasignación automática de recursos a un determinado grupo de seguridad de Maestro cuando éste cumpla ciertas condiciones.</p>
+            <button>Executar</button>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-ship"></i>
+                <h3>Bloqueo de tráfico de forma inmediata</h3>
+            </div>
+            <p>Desde una interfaz centralizada, bloqueo (permanente o temporal) de una determinada IP o dominio en todos los gateways de forma simultanea. Sin la necesidad de instalación de política.</p>
+            <button>Executar</button>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-train"></i>
+                <h3>HealthCheck de los equipos de forma externa</h3>
+            </div>
+            <p>Interfaz donde se pueda ver el estado general de los equipos Check Point, con la posibilidad de profundizar en el detalle de cada uno de ellos según necesidades.</p>
+            <button>Executar</button>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-truck"></i>
+                <h3>Proceso de restauración automático</h3>
+            </div>
+            <p>Automatización de las tareas para realizar copias de seguridad regulares y recuperación de equipos.</p>
+            <button>Executar</button>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-subway"></i>
+                <h3>"Botón del pánico" automatizado</h3>
+            </div>
+            <p>Herramienta para una respuesta rápida en situaciones de emergencia. Esta automatización sería un sistema diseñado para activar una serie de acciones predefinidas simultáneamente en todos los equipos.</p>
+            <button>Executar</button>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-helicopter"></i>
+                <h3>Consulta de actividad de una determinada IP</h3>
+            </div>
+            <p>Acceso a una interfaz que permita verificar de forma unificada la actividad asociada a una IP específica, ofreciendo una visión tanto de los eventos recientes como de los históricos. Actualmente, los registros de eventos más recientes se almacenan en el sistema interno del firewall, lo que permite consultas rápidas y en tiempo real de la actividad de la IP seleccionada. Por otro lado, de los registros más antiguos, se mantiene una copia de seguridad en un equipo externo.</p>
+            <button>Executar</button>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-car"></i>
+                <h3>Aplicación de política de threat prevention según niveles de seguridad</h3>
+            </div>
+            <p>En un entorno de red complejo, es esencial implementar políticas de seguridad que se adapten a la criticidad y sensibilidad de los activos. La definición de políticas de seguridad personalizadas según el nivel de seguridad del entorno implica la activación de restricciones y funciones específicas de manera personalizada para garantizar una protección óptima.</p>
+            <button>Executar</button>
+        </div>
+    </div>
+</body>
+</html>
